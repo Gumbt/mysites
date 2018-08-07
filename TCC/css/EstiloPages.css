@@ -1,0 +1,149 @@
+#relatorios{
+	border:1px solid black;
+	margin:0 auto;
+	padding:20px;
+	width:55%;
+	height:350px;
+	position:relative;
+	overflow:scroll;
+}
+.relatorios2{
+	border:1px solid black;
+	height:70px;
+	width:90%;
+	margin:10px auto;
+}
+.botaovoltar{
+
+	background:#BD4C4C;
+	height:40px;
+}
+
+.botaoimprimir{
+	background:#3D8D4D;
+	height:40px;
+}
+.botaovoltar:hover{
+	background:#BB3B3B;
+}
+.botaoimprimir:hover{
+	background:#246E33;
+}
+
+div.iconsrela {
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+}
+
+.vizualizarcliente tr td{
+	border:1px solid black;
+	width:150px;
+	max-width:150px;
+	height:25px;
+
+}
+
+.vizualizarcliente th
+{
+	font-style: normal;
+	font-weight: normal;
+	border-bottom: 1px dotted #baaea3;
+	border-top: 1px dotted #baaea3;
+}
+
+.vizualizarcliente th a:hover, tbody tr:hover th
+{   
+   font-style: normal;   
+   font-weight: normal;   
+   background-color: #b5370e;
+}
+.vizualizarcliente td
+{
+   height: 30px;
+   background-color: #628AB1;
+   color: black;
+	border-bottom: 1px dotted #baaea3;
+	border-top: 1px dotted #baaea3;
+}
+
+.vizualizarcliente tr:hover td
+{
+  background-color: #AE3C3E;
+  color: white;
+}
+.vizuprocura {
+	font-size:18px;
+    width: 930px;
+    height: 300px;
+	margin:0 auto;
+	z-index:1;
+}
+.divvizualizar
+{
+	font-size:18px;
+    width: 930px;
+    height: 283px;
+	margin:0 auto;
+	z-index:1;
+	overflow:scroll;
+}
+.vizualizarcliente 
+{
+	background-color: #baaea3;
+	text-align: left;
+	border-spacing: 0px;
+	 margin-left: 0;
+}
+
+
+
+
+
+.vizualizarcliente2 tr td{
+	border:1px solid black;
+	width:150px;
+	height:25px;
+}
+.vizualizarcliente2 th
+{
+	font-style: normal;
+	font-weight: normal;
+	border-bottom: 1px dotted #baaea3;
+	border-top: 1px dotted #baaea3;
+}
+.vizualizarcliente2
+{
+	background-color: #baaea3;
+	text-align: left;
+	border-spacing: 0px;
+	 margin-left: 0;
+}
+.vizualizarcliente2 td
+{
+   height: 30px;
+   background-color: #1F5890;
+   color: black;
+	border-bottom: 1px dotted #baaea3;
+	border-top: 1px dotted #baaea3;
+}
+
+.vizuprocura2 {
+	font-size:18px;
+    width: 626px;
+    height: 300px;
+	margin:0 auto;
+	z-index:1;
+}
+.divvizualizar2
+{
+	font-size:18px;
+    width: 626px;
+    height: 283px;
+	margin:0 auto;
+	z-index:1;
+	overflow:scroll;
+}
