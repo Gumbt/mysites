@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+	<head>
+		<title>Snake</title>
+		<meta http-equiv="content-language" content="pt-br" />
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />		
+		<link rel="stylesheet" href="css/default.css" type="text/css"/>
+		<script type="text/javascript" src="js/snake.js"></script>		
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript">window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	</head>
+	<body>
+	<script type="text/javascript">	
+	$(document).ready(function(){
+		$('#pontForm').submit(function(e){//ajax para enviar a pontuaçao para o php sem mudar de pagina
+			e.preventDefault();
+			var form = $(this);//pega o form
+			var ajaxUrl = form.attr('action');//pega o action do form
+			var formData = form.serialize();//pega os valores dos inputs
+			$.post(ajaxUrl, formData, function(data){			
+				document.getElementById('cadastrado').style.display = 'block';
+		 });
+		});
+	});
+	</script>
+		<div id="container">
+			<div id="box_score">
+				<h1> <span id="pontos"> 0 </span>&nbsp;pontos </h1>
+			</div>
+			<canvas id="canvas" width="510" height="510">
+			</canvas>
+		</div>
+		<div id="endgame" style="display:none">
+			<form action="banco/pontuacao.php" method="POST" id="pontForm">
+				<p style="margin-top: 50px;font-size: 30px;">FIM DE JOGO</p>
+				<h1 style="font-size: 20px;"> <span id="pontos2" style="font-size: 20px;"> 0 </span>&nbsp;pontos </h1>
+				<div class="style-2"><input type="text" name="nome" placeholder="Digite seu nome"></div>
+				<input type="hidden" name="dificuldade" id="dificul" value="medio">
+				<input type="hidden" name="pontos" id="pontos3" value="">
+				<button  class="btn btn-red" type="submit" style="width: auto!important;margin-top: 10px;">Enviar pontuação</button>
+				<a onClick="Jogo._iniciar()" class="btn" style="width: auto!important;margin-top: 10px;">Jogar Novamente</a>
+			</form>
+			<div id="cadastrado" style="margin-top:10px;color:red;display:none">Pontuação cadastrada com sucesso</div>
+		</div>
+
+		
+		<div class="legenda">
+			<h1>Menu</h1>
+			<a onClick="Jogo._iniciar()" class="btn">Jogar</a>
+			<a onClick="Jogo._pausar()" class="btn">Pausar</a>
+			<a onclick="window.open('banco/ranking.php', 'Ranking', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=10, LEFT=10, WIDTH=770, HEIGHT=400');" class="btn">Ranking</a>
+			<h1>Dificuldade</h1>
+			<select onchange="setDificuldade(this.value);Jogo._iniciar()" id="soflow">
+			  <option value="facil">Facil</option>
+			  <option value="medio" selected>Médio</option>
+			  <option value="dificil">Dificil</option>
+			</select>
+		</div>
+		
+	</body>
+</html>

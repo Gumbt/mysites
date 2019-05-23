@@ -1,0 +1,6 @@
+O jogo está disponivel em http://snakegg-com.umbler.net/ temporariamente.
+Se quiser ver/usar o banco de dados:
+https://phpmyadmin.umbler.com/
+servidor: mysql796.umbler.com
+utilizador: u90603881_lol
+palavra-passe: 1234567G
